@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>css3无缝滚动</title>
+<style>
+*{margin: 0;padding: 0;list-style:none; border: 0;}
+body{background: #000;}
+.box{width: 600px;height: 200px;border: 1px solid red; margin: 100px auto;position: relative; overflow: hidden;}
+.box ul{width: 99999px; overflow: hidden;position: absolute; left:0;top:0; animation:sport 5s linear infinite;}
+.box li{float: left;}
+.box ul:hover{animation-play-state:paused;}
+.box ul:hover li{opacity:0.2;}
+.box ul li:hover{opacity:1;}
+
+@keyframes sport{
+	0%{left:0;}
+	100%{left:-1200px;}
+}
+
+</style>
+</head>
+
+<body>
+<div class="box">
+	<ul>
+		<li><img src="images/img_01.jpg" width="300" height="200" alt=""/></li>
+		<li><img src="images/img_02.jpg" width="300" height="200" alt=""/></li>
+		<li><img src="images/img_03.jpg" width="300" height="200" alt=""/></li>
+		<li><img src="images/img_04.jpg" width="300" height="200" alt=""/></li>
+		<li><img src="images/img_01.jpg" width="300" height="200" alt=""/></li>
+		<li><img src="images/img_02.jpg" width="300" height="200" alt=""/></li>
+	</ul>
+</div>
+</body>
+</html>
